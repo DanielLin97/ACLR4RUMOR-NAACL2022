@@ -1,7 +1,7 @@
 # ACLR4RUMOR-NAACL2022
 
 Code and datasets for our NAACL 2022 paper - Detect Rumors in Microblog Posts for Low-Resource Domains via Adversarial Contrastive Learning
-will be release soon...
+will be released soon...
 
 # Requirements
 ```
