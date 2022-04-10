@@ -14,4 +14,5 @@ torch_cluster==1.4.5
 torch_geometric==1.3.2  
 tqdm==4.40.0  
 joblib==0.14.1
+transformers==4.5.0
 ```
