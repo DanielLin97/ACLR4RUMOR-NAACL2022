@@ -1,1 +1,3 @@
-The datasets organized and constructed in this work for both cross-domain and cross-lingual experimental settings.
+The datasets organized and constructed in this work for both cross-domain and cross-lingual experimental settings.  
+Twitter: the well-resourced dataset for open domains in English  
+Weibo: the target low-resource dataset for COVID-19 in Chinese
