@@ -3,11 +3,11 @@ The datasets organized and constructed in this work for both cross-domain and cr
 Twitter: the well-resourced dataset TWITTER for open domains in English  
 Weibo: the target low-resource dataset Weibo-COVID19 for COVID-19 domain in Chinese
 
-Consecutive columns correspond to the following pieces of information:
-1: root-id -- an unique identifier describing the tree/conversation (id of the root);
-2: index-of-parent-post -- an index number of the parent post for the current post;
-3: index-of-the-current-post -- an index number of the current post;
-4: time-delay -- the time slot between the current post and the root;
+Consecutive columns correspond to the following pieces of information:  
+1: root-id -- an unique identifier describing the tree/conversation (id of the root);  
+2: index-of-parent-post -- an index number of the parent post for the current post;  
+3: index-of-the-current-post -- an index number of the current post;  
+4: time-delay -- the time slot between the current post and the root;  
 5: text -- the textual content of the current post.
 
 # Precomputed representations
