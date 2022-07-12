@@ -18,19 +18,19 @@ transformers==4.5.0
 
 # Get Started
 Run script
-'''
+```
 $ sh main.sh
-'''
+```
 
 # Acknowledgement
 This work is a joint study with the support of Beijing University of Posts and Telecommunications and Hong Kong Baptist University.
 
 If you find this resource useful, please let us know and cite our paper:
-'''
+```
 @article{lin2022detect,
   title={Detect Rumors in Microblog Posts for Low-Resource Domains via Adversarial Contrastive Learning},
   author={Lin, Hongzhan and Ma, Jing and Chen, Liangliang and Yang, Zhiwei and Cheng, Mingfei and Chen, Guang},
   journal={arXiv preprint arXiv:2204.08143},
   year={2022}
 }
-'''
+```
