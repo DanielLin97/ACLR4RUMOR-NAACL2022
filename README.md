@@ -2,7 +2,7 @@
 
 Code and datasets for our NAACL 2022 paper - [Detect Rumors in Microblog Posts for Low-Resource Domains via Adversarial Contrastive Learning](https://arxiv.org/pdf/2204.08143.pdf).
 
-# Requirements
+## Requirements
 ```
 python==3.6  
 numpy==1.18.1  
@@ -16,13 +16,13 @@ joblib==0.14.1
 transformers==4.5.0
 ```
 
-# Get Started
+## Get Started
 Run script
 ```
 $ sh start.sh
 ```
 
-# Acknowledgement
+## Acknowledgement
 This work is a joint study with the support of Beijing University of Posts and Telecommunications (BUPT) and Hong Kong Baptist University (HKBU).
 
 If you find this resource useful, please let us know and cite our paper:
