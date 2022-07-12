@@ -19,7 +19,7 @@ transformers==4.5.0
 # Get Started
 Run script
 ```
-$ sh main.sh
+$ sh start.sh
 ```
 
 # Acknowledgement
