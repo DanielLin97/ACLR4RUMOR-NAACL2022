@@ -5,3 +5,4 @@
 python ./Process/getWeibograph.py Weibo
 #Reproduce the experimental results.
 CUDA_VISIBLE_DEVICES=0 python ./model/Weibo/ACLR_Weibo.py Weibo 1
+#end
