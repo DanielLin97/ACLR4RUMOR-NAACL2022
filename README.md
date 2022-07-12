@@ -23,7 +23,7 @@ $ sh main.sh
 ```
 
 # Acknowledgement
-This work is a joint study with the support of Beijing University of Posts and Telecommunications and Hong Kong Baptist University.
+This work is a joint study with the support of Beijing University of Posts and Telecommunications (BUPT) and Hong Kong Baptist University (HKBU).
 
 If you find this resource useful, please let us know and cite our paper:
 ```
