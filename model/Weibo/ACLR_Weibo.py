@@ -104,7 +104,9 @@ class SCL(th.nn.Module):
             cos_diag = th.diag_embed(diag)  # bs,bs
 
             label = th.unsqueeze(label_1, -1)
-
+            if label.shape[0] == 1:
+                cos_loss = th.zeros(1)
+                return coss_loss
             for i in range(label.shape[0] - 1):
                 if i == 0:
                     label_mat = th.cat((label, label), -1)
