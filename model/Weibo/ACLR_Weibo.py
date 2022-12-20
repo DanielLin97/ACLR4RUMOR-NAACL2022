@@ -106,30 +106,30 @@ class SCL(th.nn.Module):
             label = th.unsqueeze(label_1, -1)
             if label.shape[0] == 1:
                 cos_loss = th.zeros(1)
-                return coss_loss
-            for i in range(label.shape[0] - 1):
-                if i == 0:
-                    label_mat = th.cat((label, label), -1)
-                else:
-                    label_mat = th.cat((label_mat, label), -1)  # bs, bs
+            else:
+                for i in range(label.shape[0] - 1):
+                    if i == 0:
+                        label_mat = th.cat((label, label), -1)
+                    else:
+                        label_mat = th.cat((label_mat, label), -1)  # bs, bs
             #print(label_mat.size())
             #print(label.size())
             #exit(0)
 
-            mid_mat_ = (label_mat.eq(label_mat.t()))
-            mid_mat = mid_mat_.float()
+                mid_mat_ = (label_mat.eq(label_mat.t()))
+                mid_mat = mid_mat_.float()
 
-            cosine_similarity = (cosine_similarity-cos_diag) / self.temperature  # the diag is 0
-            mid_diag = th.diag_embed(th.diag(mid_mat))
-            mid_mat = mid_mat - mid_diag
+                cosine_similarity = (cosine_similarity-cos_diag) / self.temperature  # the diag is 0
+                mid_diag = th.diag_embed(th.diag(mid_mat))
+                mid_mat = mid_mat - mid_diag
 
-            cosine_similarity = cosine_similarity.masked_fill_(mid_diag.byte(), -float('inf'))  # mask the diag
+                cosine_similarity = cosine_similarity.masked_fill_(mid_diag.byte(), -float('inf'))  # mask the diag
 
-            cos_loss = th.log(th.clamp(F.softmax(cosine_similarity, dim=1) + mid_diag, 1e-10, 1e10))  # the sum of each row is 1
+                cos_loss = th.log(th.clamp(F.softmax(cosine_similarity, dim=1) + mid_diag, 1e-10, 1e10))  # the sum of each row is 1
 
-            cos_loss = cos_loss * mid_mat
+                cos_loss = cos_loss * mid_mat
 
-            cos_loss = th.sum(cos_loss, dim=1) / (th.sum(mid_mat, dim=1) + 1e-10)  # bs
+                cos_loss = th.sum(cos_loss, dim=1) / (th.sum(mid_mat, dim=1) + 1e-10)  # bs
         else:
             if bs_1 != bs_2:
                 while bs_1 < bs_2:
