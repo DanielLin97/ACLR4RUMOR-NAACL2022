@@ -150,18 +150,18 @@ class SCL(th.nn.Module):
             cosine_similarity = th.matmul(normalize_inrep_1, normalize_inrep_2.t())  # bs_1, bs_2
 
             label_1 = th.unsqueeze(label_1, -1)
-
+            label_1_mat = th.cat((label_1, label_1), -1)
             for i in range(label_1.shape[0] - 1):
                 if i == 0:
-                    label_1_mat = th.cat((label_1, label_1), -1)
+                    label_1_mat = label_1_mat
                 else:
                     label_1_mat = th.cat((label_1_mat, label_1), -1)  # bs, bs
 
             label_2 = th.unsqueeze(label_2, -1)
-
+            label_2_mat = th.cat((label_2, label_2), -1)
             for i in range(label_2.shape[0] - 1):
                 if i == 0:
-                    label_2_mat = th.cat((label_2, label_2), -1)
+                    label_2_mat = label_2_mat
                 else:
                     label_2_mat = th.cat((label_2_mat, label_2), -1)  # bs, bs
 
