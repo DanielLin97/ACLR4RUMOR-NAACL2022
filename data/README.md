@@ -7,7 +7,7 @@ Consecutive columns correspond to the following pieces of information:
 1: root-id -- an unique identifier describing the tree/conversation (id of the root);  
 2: index-of-parent-post -- an index number of the parent post for the current post;  
 3: index-of-the-current-post -- an index number of the current post;  
-4: time-delay -- the time slot between the current post and the root (just a placeholder in Weibo-COVID19 for the format consistence);  
+4: time-delay -- the time slot between the current post and the root (just a placeholder in Weibo-COVID19 for the format consistency);  
 5: text -- the textual content of the current post.
 
 # Precomputed representations
